@@ -1,7 +1,30 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\PracticaEncriptacion\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{99C98D64-982E-4660-8A96-9D78D087D2F5}|..\\DAL\\DAL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\dal\\capitales\\capitalesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7C4A163-D90C-424F-9548-D899D60514AF}|PracticaEncriptacion.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\practicaencriptacion\\controllers\\capitalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7C4A163-D90C-424F-9548-D899D60514AF}|PracticaEncriptacion.csproj|solutionrelative:controllers\\capitalescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F50A7C-9A78-47A7-A425-1A4F38DD77A6}|..\\BLL\\BLL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\bll\\capitales\\capitalesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F50A7C-9A78-47A7-A425-1A4F38DD77A6}|..\\BLL\\BLL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\bll\\common\\messageresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F50A7C-9A78-47A7-A425-1A4F38DD77A6}|..\\BLL\\BLL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\bll\\capitales\\icapitalesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99C98D64-982E-4660-8A96-9D78D087D2F5}|..\\DAL\\DAL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\dal\\capitales\\icapitalesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99C98D64-982E-4660-8A96-9D78D087D2F5}|..\\DAL\\DAL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\dal\\common\\messageresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +32,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CapitalesController.cs",
+              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\PracticaEncriptacion\\Controllers\\CapitalesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CapitalesController.cs",
+              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\PracticaEncriptacion\\Controllers\\CapitalesController.cs",
+              "RelativeToolTip": "Controllers\\CapitalesController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T19:42:54.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MessageResponse.cs",
+              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Common\\MessageResponse.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Common\\MessageResponse.cs",
+              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Common\\MessageResponse.cs",
+              "RelativeToolTip": "..\\BLL\\Common\\MessageResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T19:40:18.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CapitalesService.cs",
+              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Capitales\\CapitalesService.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Capitales\\CapitalesService.cs",
+              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Capitales\\CapitalesService.cs",
+              "RelativeToolTip": "..\\BLL\\Capitales\\CapitalesService.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAAF0AAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T19:37:54.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ICapitalesService.cs",
+              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Capitales\\ICapitalesService.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Capitales\\ICapitalesService.cs",
+              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Capitales\\ICapitalesService.cs",
+              "RelativeToolTip": "..\\BLL\\Capitales\\ICapitalesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T19:37:34.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CapitalesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Capitales\\CapitalesRepository.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Capitales\\CapitalesRepository.cs",
+              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Capitales\\CapitalesRepository.cs",
+              "RelativeToolTip": "..\\DAL\\Capitales\\CapitalesRepository.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAAAIUAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T19:29:31.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICapitalesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Capitales\\ICapitalesRepository.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Capitales\\ICapitalesRepository.cs",
+              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Capitales\\ICapitalesRepository.cs",
+              "RelativeToolTip": "..\\DAL\\Capitales\\ICapitalesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T19:29:32.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MessageResponse.cs",
+              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Common\\MessageResponse.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Common\\MessageResponse.cs",
+              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Common\\MessageResponse.cs",
+              "RelativeToolTip": "..\\DAL\\Common\\MessageResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T16:46:17.568Z",
+              "EditorCaption": ""
             }
           ]
         },

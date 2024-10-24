@@ -1,0 +1,144 @@
+[
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.CapitalesController",
+    "Method": "Add",
+    "RelativePath": "api/Capitales/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "capital",
+        "Type": "Entities.Models.DTOs.Capital",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.CapitalesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Capitales/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.CapitalesController",
+    "Method": "GetById",
+    "RelativePath": "api/Capitales/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.CapitalesController",
+    "Method": "GetByPostalCode",
+    "RelativePath": "api/Capitales/GetByPostalCode/{postalCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postalCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.CapitalesController",
+    "Method": "GetByPostalCodeStartsWith",
+    "RelativePath": "api/Capitales/GetByPostalCodeStartsWith/{searchTerm}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchTerm",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.PaisesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Paises/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.PaisesController",
+    "Method": "GetByAcronimo",
+    "RelativePath": "api/Paises/GetByAcronimo/{acronimo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "acronimo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.PaisesController",
+    "Method": "GetByAcronimoStartsWith",
+    "RelativePath": "api/Paises/GetByAcronimoStartsWith/{acronimo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "acronimo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.PaisesController",
+    "Method": "GetById",
+    "RelativePath": "api/Paises/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.PaisesController",
+    "Method": "GetOrderByAcronimoDESC",
+    "RelativePath": "api/Paises/GetOrderByAcronimoDESC",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
