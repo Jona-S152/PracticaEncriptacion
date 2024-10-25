@@ -153,5 +153,34 @@ namespace DAL.Capitales
                 throw new Exception(ex.Message);
             }
         }
+
+        public async Task<bool> Update(Capital capital, int id)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(_connectionString))
+                {
+                    string query = SqlQueries.UpdateCapitals;
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        conn.Open();
+                        cmd.Parameters.AddWithValue(ParametersQuery.ID, id);
+                        cmd.Parameters.AddWithValue(ParametersQuery.Nombre, capital.Nombre);
+                        cmd.Parameters.AddWithValue(ParametersQuery.Acronimo, capital.Acronimo);
+                        cmd.Parameters.AddWithValue(ParametersQuery.CodigoPostal, capital.CodigoPostal);
+                        cmd.Parameters.AddWithValue(ParametersQuery.PaisID, capital.PaisID);
+
+                        await cmd.ExecuteNonQueryAsync();
+                        conn.Close();
+
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

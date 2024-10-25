@@ -67,5 +67,15 @@ namespace PracticaEncriptacion.Controllers
 
             return Ok(response);
         }
+
+        [HttpPut(ApiRoutes.Capitales.Update)]
+        public async Task<IActionResult> Update([FromBody] Capital capital, int id)
+        {
+            ResponseJson response = await _capitalesService.Update(capital, id);
+
+            if (response.Error) return BadRequest(response);
+
+            return Ok(response);
+        }
     }
 }

@@ -74,6 +74,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PracticaEncriptacion.Controllers.CapitalesController",
+    "Method": "Update",
+    "RelativePath": "api/Capitales/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "capital",
+        "Type": "Entities.Models.DTOs.Capital",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PracticaEncriptacion.Controllers.PaisesController",
     "Method": "Add",
     "RelativePath": "api/Paises/Add",
@@ -84,6 +105,22 @@
       {
         "Name": "pais",
         "Type": "Entities.Models.Paise",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.PaisesController",
+    "Method": "Delete",
+    "RelativePath": "api/Paises/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

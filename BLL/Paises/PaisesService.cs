@@ -18,6 +18,11 @@ namespace BLL.Paises
             _paisesRepository = repo;
         }
 
+        public async Task<ResponseJson> Delete(int id)
+        {
+            return await _paisesRepository.Delete(id);
+        }
+
         public async Task<ResponseJson> GetAll()
         {
             return await _paisesRepository.GetAll();

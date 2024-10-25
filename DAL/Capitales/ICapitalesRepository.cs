@@ -13,5 +13,6 @@ namespace DAL.Capitales
         public Task<Capital> GetById(int id);
         public Task<Capital> GetByPostalCode(string postalCode);
         public Task<bool> Insert(Capital capital);
+        public Task<bool> Update(Capital capital, int id);
     }
 }

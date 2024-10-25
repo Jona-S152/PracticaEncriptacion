@@ -100,5 +100,21 @@ namespace BLL.Capitales
                 return new ResponseJson(ex.Message, null, true);
             }
         }
+
+        public async Task<ResponseJson> Update(Capital capital, int id)
+        {
+            try
+            {
+                bool isSuccessfulUpdate = await _capitalesRepository.Update(capital, id);
+
+                if (!isSuccessfulUpdate) return new ResponseJson(MessageResponse.UpdatingFailed, null, true);
+
+                return new ResponseJson(MessageResponse.SuccessfulUpdating, null, false);
+            }
+            catch (Exception ex)
+            {
+                return new ResponseJson(ex.Message, null, true);
+            }
+        }
     }
 }

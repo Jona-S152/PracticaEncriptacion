@@ -14,5 +14,6 @@ namespace DAL.Common
         public const string Country = "País";
         public const string SuccessfulRegistration = "Registro exitoso";
         public const string SuccessfulUpdating = "Actualización exitosa";
+        public const string SuccessfulDeleting = "Eliminación exitosa";
     }
 }

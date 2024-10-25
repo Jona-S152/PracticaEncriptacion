@@ -16,5 +16,6 @@ namespace DAL.Paises
         public Task<ResponseJson> GetByAcronimo(string acronimo);
         public Task<ResponseJson> Insert(Paise pais);
         public Task<ResponseJson> Update(Paise pais, int id);
+        public Task<ResponseJson> Delete(int id);
     }
 }

@@ -13,5 +13,6 @@ namespace DAL.Common
         public const string SelectCapitalsByCodigoPostal = "SELECT * FROM Capitales WHERE CodigoPostal = @CodigoPostal";
         public const string SelectCapitalsById = "SELECT * FROM Capitales WHERE ID = @ID";
         public const string SelectAllCapitals = "SELECT * FROM Capitales";
+        public const string UpdateCapitals = "UPDATE Capitales SET ID = @ID, Nombre = @Nombre, Acronimo = @Acronimo, CodigoPostal = @CodigoPostal, PaisID = @PaisID WHERE ID = @ID";
     }
 }

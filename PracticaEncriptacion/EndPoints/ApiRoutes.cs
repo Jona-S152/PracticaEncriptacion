@@ -1,4 +1,6 @@
-﻿namespace PracticaEncriptacion.EndPoints
+﻿using Microsoft.Identity.Client;
+
+namespace PracticaEncriptacion.EndPoints
 {
     public class ApiRoutes
     {
@@ -9,6 +11,7 @@
             public const string GetByPostalCode = "GetByPostalCode/{postalCode}";
             public const string GetById = "GetById/{id}";
             public const string GetAll = "GetAll";
+            public const string Update = "Update/{id}";
         }
 
         public static class Paises
@@ -20,6 +23,7 @@
             public const string GetOrderByAcronimoDESC = "GetOrderByAcronimoDESC";
             public const string Add = "Add";
             public const string Update = "Update/{id}";
+            public const string Delete = "Delete/{id}";
         }
     }
 }

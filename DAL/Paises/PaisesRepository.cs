@@ -20,6 +20,25 @@ namespace DAL.Paises
             _context = context;
         }
 
+        public async Task<ResponseJson> Delete(int id)
+        {
+            try
+            {
+                Paise paisFound = await _context.Paises.FirstOrDefaultAsync(p => p.Id == id);
+
+                if (paisFound == null) return new ResponseJson("El país no se encuentra registrado", null, true);
+
+                _context.Paises.Remove(paisFound);
+                await _context.SaveChangesAsync();
+
+                return new ResponseJson(MessageResponse.SuccessfulDeleting, null, false);
+            }
+            catch (Exception ex)
+            {
+                return new ResponseJson(ex.Message, null, true);
+            }
+        }
+
         public async Task<ResponseJson> GetAll()
         {
             try

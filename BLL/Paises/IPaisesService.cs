@@ -17,5 +17,6 @@ namespace BLL.Paises
         public Task<ResponseJson> GetOrderByAcronimoDESC();
         public Task<ResponseJson> Insert(Paise pais);
         public Task<ResponseJson> Update(Paise pais, int id);
+        public Task<ResponseJson> Delete(int id);
     }
 }
