@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "PracticaEncriptacion.Controllers.CapitalesController",
+    "Method": "Delete",
+    "RelativePath": "api/Capitales/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.CapitalesController",
     "Method": "GetAll",
     "RelativePath": "api/Capitales/GetAll",
     "HttpMethod": "GET",

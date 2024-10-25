@@ -16,5 +16,6 @@ namespace BLL.Capitales
         public Task<ResponseJson> GetByPostalCodeStartsWith(string characters);
         public Task<ResponseJson> Insert(Capital capital);
         public Task<ResponseJson> Update(Capital capital, int id);
+        public Task<ResponseJson> DeleteById(int id);
     }
 }

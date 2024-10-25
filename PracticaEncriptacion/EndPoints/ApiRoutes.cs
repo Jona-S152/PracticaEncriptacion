@@ -12,6 +12,7 @@ namespace PracticaEncriptacion.EndPoints
             public const string GetById = "GetById/{id}";
             public const string GetAll = "GetAll";
             public const string Update = "Update/{id}";
+            public const string Delete = "Delete/{id}";
         }
 
         public static class Paises

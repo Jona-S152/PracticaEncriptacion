@@ -77,5 +77,15 @@ namespace PracticaEncriptacion.Controllers
 
             return Ok(response);
         }
+
+        [HttpDelete(ApiRoutes.Capitales.Delete)]
+        public async Task<IActionResult> Delete(int id)
+        {
+            ResponseJson response = await _capitalesService.DeleteById(id);
+
+            if (response.Error) return BadRequest(response);
+
+            return Ok(response);
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using BLL.Common;
 using DAL.Capitales;
 using Entities;
+using Entities.Models;
 using Entities.Models.DTOs;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,20 @@ namespace BLL.Capitales
         public CapitalesService(ICapitalesRepository repo)
         {
             _capitalesRepository = repo;
+        }
+
+        public async Task<ResponseJson> DeleteById(int id)
+        {
+            try
+            {
+                await _capitalesRepository.DeleteById(id);
+
+                return new ResponseJson(MessageResponse.SuccessfulRemoving, null, false);
+            }
+            catch (Exception ex)
+            {
+                return new ResponseJson(ex.Message, null, true);
+            }
         }
 
         public async Task<ResponseJson> GetAll()

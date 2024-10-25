@@ -14,6 +14,7 @@ namespace BLL.Common
         public const string CapitalNotFound = "Capital no encontrada";
         public const string Capital = "Capital";
         public const string SuccessfulRegistration = "Registro exitoso";
+        public const string SuccessfulRemoving = "Eliminación exitosa";
         public const string SuccessfulUpdating = "Actualización exitosa";
         public const string RegistrationFailed = "No se pudo completar el registro";
         public const string UpdatingFailed = "No se pudo completar la actualización";

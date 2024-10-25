@@ -19,6 +19,26 @@ namespace DAL.Capitales
             _connectionString = connectionString.Value.EncriptacionDB;
         }
 
+        public async Task<bool> DeleteById(int id)
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                string query = SqlQueries.DeleteCapitals;
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.Parameters.AddWithValue(ParametersQuery.ID, id);
+
+                    await cmd.ExecuteNonQueryAsync();
+
+                    return true;
+                }
+            }
+        }
+
         public async Task<List<Capital>> GetAll()
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
