@@ -3,6 +3,7 @@ using Entities;
 using Entities.Models.DTOs;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PracticaEncriptacion.EndPoints;
 
 namespace PracticaEncriptacion.Controllers
 {
@@ -17,7 +18,7 @@ namespace PracticaEncriptacion.Controllers
             _capitalesService = service;
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet(ApiRoutes.Capitales.GetAll)]
         public async Task<IActionResult> GetAll()
         {
             ResponseJson response = await _capitalesService.GetAll();
@@ -27,7 +28,7 @@ namespace PracticaEncriptacion.Controllers
             return Ok(response);
         }
 
-        [HttpGet("GetById/{id}")]
+        [HttpGet(ApiRoutes.Capitales.GetById)]
         public async Task<IActionResult> GetById(int id)
         {
             ResponseJson response = await _capitalesService.GetById(id);
@@ -37,7 +38,7 @@ namespace PracticaEncriptacion.Controllers
             return Ok(response);
         }
 
-        [HttpGet("GetByPostalCode/{postalCode}")]
+        [HttpGet(ApiRoutes.Capitales.GetByPostalCode)]
         public async Task<IActionResult> GetByPostalCode(string postalCode)
         {
             ResponseJson response = await _capitalesService.GetByPostalCode(postalCode);
@@ -47,7 +48,7 @@ namespace PracticaEncriptacion.Controllers
             return Ok(response);
         }
 
-        [HttpGet("GetByPostalCodeStartsWith/{searchTerm}")]
+        [HttpGet(ApiRoutes.Capitales.GetByPostalCodeStartsWith)]
         public async Task<IActionResult> GetByPostalCodeStartsWith(string searchTerm)
         {
             ResponseJson response = await _capitalesService.GetByPostalCodeStartsWith(searchTerm);
@@ -57,7 +58,7 @@ namespace PracticaEncriptacion.Controllers
             return Ok(response);
         }
 
-        [HttpPost("Add")]
+        [HttpPost(ApiRoutes.Capitales.Add)]
         public async Task<IActionResult> Add([FromBody] Capital capital)
         {
             ResponseJson response = await _capitalesService.Insert(capital);

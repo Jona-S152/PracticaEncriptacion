@@ -23,7 +23,7 @@ namespace DAL.Capitales
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                string query = "SELECT * FROM Capitales";
+                string query = SqlQueries.SelectAllCapitals;
 
                 List<Capital> list = new List<Capital>();
 
@@ -59,7 +59,7 @@ namespace DAL.Capitales
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                string query = "SELECT * FROM Capitales WHERE ID = @Id";
+                string query = SqlQueries.SelectCapitalsById;
 
                 Capital capital = null;
 
@@ -68,7 +68,7 @@ namespace DAL.Capitales
                     conn.Open();
 
                     cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.Parameters.AddWithValue(ParametersQuery.ID, id);
 
                     using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
                     {
@@ -94,7 +94,7 @@ namespace DAL.Capitales
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                string query = "SELECT * FROM Capitales WHERE CodigoPostal = @CodigoPostal";
+                string query = SqlQueries.SelectCapitalsByCodigoPostal;
 
                 Capital capital = null;
 
@@ -103,7 +103,7 @@ namespace DAL.Capitales
                     conn.Open();
 
                     cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.Parameters.AddWithValue("@CodigoPostal", postalCode);
+                    cmd.Parameters.AddWithValue(ParametersQuery.CodigoPostal, postalCode);
 
                     using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
                     {
@@ -131,15 +131,15 @@ namespace DAL.Capitales
             {
                 using (SqlConnection conn = new SqlConnection(_connectionString))
                 {
-                    string query = "INSERT INTO Capitales (ID, Nombre, Acronimo, CodigoPostal, PaisID) VALUES (@ID, @Nombre, @Acronimo, @CodigoPostal, @PaisID)";
+                    string query = SqlQueries.InsertCapitals;
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         conn.Open();
-                        cmd.Parameters.Add(new SqlParameter("@ID", System.Data.SqlDbType.NVarChar, 100) { Value = capital.ID});
-                        cmd.Parameters.Add(new SqlParameter("@Nombre", System.Data.SqlDbType.NVarChar, 100) { Value = capital.Nombre});
-                        cmd.Parameters.Add(new SqlParameter("@Acronimo", System.Data.SqlDbType.NVarChar, 10) { Value = capital.Acronimo});
-                        cmd.Parameters.Add(new SqlParameter("@CodigoPostal", System.Data.SqlDbType.NVarChar, 10) { Value = capital.CodigoPostal});
-                        cmd.Parameters.Add(new SqlParameter("@PaisID", System.Data.SqlDbType.NVarChar, 10) { Value = capital.PaisID});
+                        cmd.Parameters.Add(new SqlParameter(ParametersQuery.ID, System.Data.SqlDbType.NVarChar, 100) { Value = capital.ID});
+                        cmd.Parameters.Add(new SqlParameter(ParametersQuery.Nombre, System.Data.SqlDbType.NVarChar, 100) { Value = capital.Nombre});
+                        cmd.Parameters.Add(new SqlParameter(ParametersQuery.Acronimo, System.Data.SqlDbType.NVarChar, 10) { Value = capital.Acronimo});
+                        cmd.Parameters.Add(new SqlParameter(ParametersQuery.CodigoPostal, System.Data.SqlDbType.NVarChar, 10) { Value = capital.CodigoPostal});
+                        cmd.Parameters.Add(new SqlParameter(ParametersQuery.PaisID, System.Data.SqlDbType.NVarChar, 10) { Value = capital.PaisID});
 
                         await cmd.ExecuteNonQueryAsync();
                         conn.Close();

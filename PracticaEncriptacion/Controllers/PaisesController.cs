@@ -3,6 +3,7 @@ using DAL.Paises;
 using Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PracticaEncriptacion.EndPoints;
 
 namespace PracticaEncriptacion.Controllers
 {
@@ -17,7 +18,7 @@ namespace PracticaEncriptacion.Controllers
             _paisesService = service;
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet(ApiRoutes.Paises.GetAll)]
         public async Task<IActionResult> GetAll()
         {
             ResponseJson response = await _paisesService.GetAll();
@@ -27,7 +28,7 @@ namespace PracticaEncriptacion.Controllers
             return Ok(response);
         }
 
-        [HttpGet("GetById/{id}")]
+        [HttpGet(ApiRoutes.Paises.GetById)]
         public async Task<IActionResult> GetById(int id)
         {
             ResponseJson response = await _paisesService.GetById(id);
@@ -37,7 +38,7 @@ namespace PracticaEncriptacion.Controllers
             return Ok(response);
         }
 
-        [HttpGet("GetByAcronimo/{acronimo}")]
+        [HttpGet(ApiRoutes.Paises.GetByAcronimo)]
         public async Task<IActionResult> GetByAcronimo(string acronimo)
         {
             ResponseJson response = await _paisesService.GetByAcronimo(acronimo);
@@ -47,7 +48,7 @@ namespace PracticaEncriptacion.Controllers
             return Ok(response);
         }
 
-        [HttpGet("GetByAcronimoStartsWith/{acronimo}")]
+        [HttpGet(ApiRoutes.Paises.GetByAcronimoStartsWith)]
         public async Task<IActionResult> GetByAcronimoStartsWith(string acronimo)
         {
             ResponseJson response = await _paisesService.GetByAcronimoStartsWith(acronimo);
@@ -57,7 +58,7 @@ namespace PracticaEncriptacion.Controllers
             return Ok(response);
         }
 
-        [HttpGet("GetOrderByAcronimoDESC")]
+        [HttpGet(ApiRoutes.Paises.GetOrderByAcronimoDESC)]
         public async Task<IActionResult> GetOrderByAcronimoDESC()
         {
             ResponseJson response = await _paisesService.GetOrderByAcronimoDESC();
