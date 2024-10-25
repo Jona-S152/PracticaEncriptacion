@@ -75,6 +75,22 @@
   },
   {
     "ContainingType": "PracticaEncriptacion.Controllers.PaisesController",
+    "Method": "Add",
+    "RelativePath": "api/Paises/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pais",
+        "Type": "Entities.Models.Paise",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.PaisesController",
     "Method": "GetAll",
     "RelativePath": "api/Paises/GetAll",
     "HttpMethod": "GET",
@@ -139,6 +155,27 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.PaisesController",
+    "Method": "Update",
+    "RelativePath": "api/Paises/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pais",
+        "Type": "Entities.Models.Paise",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

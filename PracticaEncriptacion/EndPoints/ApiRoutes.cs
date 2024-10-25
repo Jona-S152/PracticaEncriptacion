@@ -18,6 +18,8 @@
             public const string GetByAcronimo = "GetByAcronimo/{acronimo}";
             public const string GetByAcronimoStartsWith = "GetByAcronimoStartsWith/{acronimo}";
             public const string GetOrderByAcronimoDESC = "GetOrderByAcronimoDESC";
+            public const string Add = "Add";
+            public const string Update = "Update/{id}";
         }
     }
 }

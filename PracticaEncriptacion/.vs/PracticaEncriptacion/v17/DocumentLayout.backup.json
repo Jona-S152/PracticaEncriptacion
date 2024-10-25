@@ -3,33 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\PracticaEncriptacion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{74F50A7C-9A78-47A7-A425-1A4F38DD77A6}|..\\BLL\\BLL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\bll\\capitales\\capitalesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99C98D64-982E-4660-8A96-9D78D087D2F5}|..\\DAL\\DAL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\dal\\capitales\\capitalesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99C98D64-982E-4660-8A96-9D78D087D2F5}|..\\DAL\\DAL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\dal\\common\\sqlqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D7C4A163-D90C-424F-9548-D899D60514AF}|PracticaEncriptacion.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\practicaencriptacion\\controllers\\paisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7C4A163-D90C-424F-9548-D899D60514AF}|PracticaEncriptacion.csproj|solutionrelative:controllers\\paisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7C4A163-D90C-424F-9548-D899D60514AF}|PracticaEncriptacion.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\practicaencriptacion\\endpoints\\apiroutes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7C4A163-D90C-424F-9548-D899D60514AF}|PracticaEncriptacion.csproj|solutionrelative:endpoints\\apiroutes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99C98D64-982E-4660-8A96-9D78D087D2F5}|..\\DAL\\DAL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\dal\\paises\\paisesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99C98D64-982E-4660-8A96-9D78D087D2F5}|..\\DAL\\DAL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\dal\\common\\parametersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74F50A7C-9A78-47A7-A425-1A4F38DD77A6}|..\\BLL\\BLL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\bll\\paises\\paisesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74F50A7C-9A78-47A7-A425-1A4F38DD77A6}|..\\BLL\\BLL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\bll\\common\\messageresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74F50A7C-9A78-47A7-A425-1A4F38DD77A6}|..\\BLL\\BLL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\bll\\paises\\ipaisesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99C98D64-982E-4660-8A96-9D78D087D2F5}|..\\DAL\\DAL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\dal\\capitales\\icapitalesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99C98D64-982E-4660-8A96-9D78D087D2F5}|..\\DAL\\DAL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\dal\\common\\messageresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99C98D64-982E-4660-8A96-9D78D087D2F5}|..\\DAL\\DAL.csproj|c:\\users\\viamatica\\desktop\\practicaencriptacion\\dal\\paises\\ipaisesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,117 +34,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PaisesController.cs",
-              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\PracticaEncriptacion\\Controllers\\PaisesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PaisesController.cs",
-              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\PracticaEncriptacion\\Controllers\\PaisesController.cs",
-              "RelativeToolTip": "Controllers\\PaisesController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAAAEQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T13:56:43.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApiRoutes.cs",
-              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\PracticaEncriptacion\\EndPoints\\ApiRoutes.cs",
-              "RelativeDocumentMoniker": "EndPoints\\ApiRoutes.cs",
-              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\PracticaEncriptacion\\EndPoints\\ApiRoutes.cs",
-              "RelativeToolTip": "EndPoints\\ApiRoutes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T13:52:02.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ParametersQuery.cs",
-              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Common\\ParametersQuery.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\Common\\ParametersQuery.cs",
-              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Common\\ParametersQuery.cs",
-              "RelativeToolTip": "..\\DAL\\Common\\ParametersQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T13:36:16.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SqlQueries.cs",
-              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Common\\SqlQueries.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\Common\\SqlQueries.cs",
-              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Common\\SqlQueries.cs",
-              "RelativeToolTip": "..\\DAL\\Common\\SqlQueries.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABKAAAAAAAAAA==",
+              "Title": "PaisesService.cs",
+              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Paises\\PaisesService.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Paises\\PaisesService.cs",
+              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Paises\\PaisesService.cs",
+              "RelativeToolTip": "..\\BLL\\Paises\\PaisesService.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAAEQAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T13:34:46.241Z",
+              "WhenOpened": "2024-10-25T14:27:51.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IPaisesService.cs",
+              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Paises\\IPaisesService.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\Paises\\IPaisesService.cs",
+              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Paises\\IPaisesService.cs",
+              "RelativeToolTip": "..\\BLL\\Paises\\IPaisesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T14:27:27.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CapitalesRepository.cs",
-              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Capitales\\CapitalesRepository.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\Capitales\\CapitalesRepository.cs",
-              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Capitales\\CapitalesRepository.cs",
-              "RelativeToolTip": "..\\DAL\\Capitales\\CapitalesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA7AAAAAAAAAA==",
+              "Title": "PaisesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Paises\\PaisesRepository.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Paises\\PaisesRepository.cs",
+              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Paises\\PaisesRepository.cs",
+              "RelativeToolTip": "..\\DAL\\Paises\\PaisesRepository.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAAGEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T19:29:31.833Z",
+              "WhenOpened": "2024-10-25T14:18:11.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IPaisesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Paises\\IPaisesRepository.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Paises\\IPaisesRepository.cs",
+              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Paises\\IPaisesRepository.cs",
+              "RelativeToolTip": "..\\DAL\\Paises\\IPaisesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T14:17:35.49Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CapitalesService.cs",
-              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Capitales\\CapitalesService.cs",
-              "RelativeDocumentMoniker": "..\\BLL\\Capitales\\CapitalesService.cs",
-              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Capitales\\CapitalesService.cs",
-              "RelativeToolTip": "..\\BLL\\Capitales\\CapitalesService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAABjAAAAAAAAAA==",
+              "Title": "PaisesController.cs",
+              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\PracticaEncriptacion\\Controllers\\PaisesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PaisesController.cs",
+              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\PracticaEncriptacion\\Controllers\\PaisesController.cs",
+              "RelativeToolTip": "Controllers\\PaisesController.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T19:37:54.899Z",
+              "WhenOpened": "2024-10-25T13:56:43.33Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MessageResponse.cs",
-              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Common\\MessageResponse.cs",
-              "RelativeDocumentMoniker": "..\\BLL\\Common\\MessageResponse.cs",
-              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\BLL\\Common\\MessageResponse.cs",
-              "RelativeToolTip": "..\\BLL\\Common\\MessageResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T19:40:18.518Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ICapitalesRepository.cs",
-              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Capitales\\ICapitalesRepository.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\Capitales\\ICapitalesRepository.cs",
-              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Capitales\\ICapitalesRepository.cs",
-              "RelativeToolTip": "..\\DAL\\Capitales\\ICapitalesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T19:29:32.191Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MessageResponse.cs",
-              "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Common\\MessageResponse.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\Common\\MessageResponse.cs",
-              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Common\\MessageResponse.cs",
-              "RelativeToolTip": "..\\DAL\\Common\\MessageResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T16:46:17.568Z"
             }
           ]
         },
@@ -168,10 +106,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Bookmark",

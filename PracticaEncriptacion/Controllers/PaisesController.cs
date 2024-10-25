@@ -1,6 +1,7 @@
 ﻿using BLL.Paises;
 using DAL.Paises;
 using Entities;
+using Entities.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PracticaEncriptacion.EndPoints;
@@ -62,6 +63,26 @@ namespace PracticaEncriptacion.Controllers
         public async Task<IActionResult> GetOrderByAcronimoDESC()
         {
             ResponseJson response = await _paisesService.GetOrderByAcronimoDESC();
+
+            if (response.Error) return BadRequest(response);
+
+            return Ok(response);
+        }
+
+        [HttpPost(ApiRoutes.Paises.Add)]
+        public async Task<IActionResult> Add([FromBody] Paise pais)
+        {
+            ResponseJson response = await _paisesService.Insert(pais);
+
+            if (response.Error) return BadRequest(response);
+
+            return Ok(response);
+        }
+
+        [HttpPut(ApiRoutes.Paises.Update)]
+        public async Task<IActionResult> Update([FromBody] Paise pais, int id)
+        {
+            ResponseJson response = await _paisesService.Update(pais, id);
 
             if (response.Error) return BadRequest(response);
 

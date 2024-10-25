@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,7 @@ namespace BLL.Paises
         public Task<ResponseJson> GetByAcronimo(string acronimo);
         public Task<ResponseJson> GetByAcronimoStartsWith(string acronimo);
         public Task<ResponseJson> GetOrderByAcronimoDESC();
+        public Task<ResponseJson> Insert(Paise pais);
+        public Task<ResponseJson> Update(Paise pais, int id);
     }
 }

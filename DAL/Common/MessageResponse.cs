@@ -12,5 +12,7 @@ namespace DAL.Common
         public const string CountriesNotFound = "No se encontraron paises registrados";
         public const string CountryNotFound = "País no encontrado";
         public const string Country = "País";
+        public const string SuccessfulRegistration = "Registro exitoso";
+        public const string SuccessfulUpdating = "Actualización exitosa";
     }
 }

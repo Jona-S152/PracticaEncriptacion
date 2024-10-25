@@ -67,5 +67,48 @@ namespace DAL.Paises
                 return new ResponseJson(ex.Message, null, true);
             }
         }
+
+        public async Task<ResponseJson> Insert(Paise pais)
+        {
+            try
+            {
+                bool isExist = await _context.Paises.AnyAsync(p => p.Id == pais.Id || p.Nombre == pais.Nombre || p.CodigoPais == pais.CodigoPais);
+
+                if (isExist) return new ResponseJson("El país ya se encuentra registrado", null, true);
+
+                await _context.Paises.AddAsync(pais);
+                await _context.SaveChangesAsync();
+
+                return new ResponseJson(MessageResponse.SuccessfulRegistration, null, false);
+            }
+            catch (Exception ex)
+            {
+                return new ResponseJson(ex.Message, null, true);
+            }
+        }
+
+        public async Task<ResponseJson> Update(Paise pais, int id)
+        {
+            try
+            {
+                Paise paisFound = await _context.Paises.FirstOrDefaultAsync(p => p.Id == id);
+
+                if (paisFound == null) return new ResponseJson("El país no se encuentra registrado", null, true);
+
+                paisFound.Id = pais.Id;
+                paisFound.Nombre = pais.Nombre;
+                paisFound.Acronimo = pais.Acronimo;
+                paisFound.CodigoPais = pais.CodigoPais;
+
+                _context.Paises.Update(paisFound);
+                await _context.SaveChangesAsync();
+
+                return new ResponseJson(MessageResponse.SuccessfulUpdating, null, false);
+            }
+            catch (Exception ex)
+            {
+                return new ResponseJson(ex.Message, null, true);
+            }
+        }
     }
 }

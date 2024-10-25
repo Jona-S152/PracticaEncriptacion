@@ -58,5 +58,15 @@ namespace BLL.Paises
 
             return response;
         }
+
+        public async Task<ResponseJson> Insert(Paise pais)
+        {
+            return await _paisesRepository.Insert(pais);
+        }
+
+        public async Task<ResponseJson> Update(Paise pais, int id)
+        {
+            return await _paisesRepository.Update(pais, id);
+        }
     }
 }
