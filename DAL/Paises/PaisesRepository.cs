@@ -26,7 +26,7 @@ namespace DAL.Paises
             {
                 Paise paisFound = await _context.Paises.FirstOrDefaultAsync(p => p.Id == id);
 
-                if (paisFound == null) return new ResponseJson("El país no se encuentra registrado", null, true);
+                if (paisFound == null) return new ResponseJson(MessageResponse.CountryNotFound, null, true);
 
                 _context.Paises.Remove(paisFound);
                 await _context.SaveChangesAsync();
@@ -93,7 +93,7 @@ namespace DAL.Paises
             {
                 bool isExist = await _context.Paises.AnyAsync(p => p.Id == pais.Id || p.Nombre == pais.Nombre || p.CodigoPais == pais.CodigoPais);
 
-                if (isExist) return new ResponseJson("El país ya se encuentra registrado", null, true);
+                if (isExist) return new ResponseJson(MessageResponse.CountryAlreadyExist, null, true);
 
                 await _context.Paises.AddAsync(pais);
                 await _context.SaveChangesAsync();
@@ -112,7 +112,7 @@ namespace DAL.Paises
             {
                 Paise paisFound = await _context.Paises.FirstOrDefaultAsync(p => p.Id == id);
 
-                if (paisFound == null) return new ResponseJson("El país no se encuentra registrado", null, true);
+                if (paisFound == null) return new ResponseJson(MessageResponse.CountryNotFound, null, true);
 
                 paisFound.Id = pais.Id;
                 paisFound.Nombre = pais.Nombre;

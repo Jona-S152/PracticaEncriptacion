@@ -15,5 +15,6 @@ namespace DAL.Common
         public const string SelectAllCapitals = "SELECT * FROM Capitales";
         public const string UpdateCapitals = "UPDATE Capitales SET ID = @ID, Nombre = @Nombre, Acronimo = @Acronimo, CodigoPostal = @CodigoPostal, PaisID = @PaisID WHERE ID = @ID";
         public const string DeleteCapitals = "DELETE FROM Capitales WHERE ID = @ID";
+        public const string GetByIdNamePostalCode = "SELECT COUNT(1) FROM Capitales WHERE ID = @ID OR Nombre = @Nombre OR CodigoPostal = @CodigoPostal";
     }
 }

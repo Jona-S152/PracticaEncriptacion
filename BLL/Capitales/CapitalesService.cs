@@ -24,7 +24,9 @@ namespace BLL.Capitales
         {
             try
             {
-                await _capitalesRepository.DeleteById(id);
+                bool isSuccessful = await _capitalesRepository.DeleteById(id);
+
+                if (!isSuccessful) return new ResponseJson(MessageResponse.CapitalNotFound, null, true);
 
                 return new ResponseJson(MessageResponse.SuccessfulRemoving, null, false);
             }
@@ -106,7 +108,7 @@ namespace BLL.Capitales
             {
                 bool isSuccessfulInsert = await _capitalesRepository.Insert(capital);
 
-                if (!isSuccessfulInsert) return new ResponseJson(MessageResponse.RegistrationFailed, null, true);
+                if (!isSuccessfulInsert) return new ResponseJson(MessageResponse.CapitalAlreadyExist, null, true);
 
                 return new ResponseJson(MessageResponse.SuccessfulRegistration, null, false);
             }
@@ -122,7 +124,7 @@ namespace BLL.Capitales
             {
                 bool isSuccessfulUpdate = await _capitalesRepository.Update(capital, id);
 
-                if (!isSuccessfulUpdate) return new ResponseJson(MessageResponse.UpdatingFailed, null, true);
+                if (!isSuccessfulUpdate) return new ResponseJson(MessageResponse.CapitalNotFound, null, true);
 
                 return new ResponseJson(MessageResponse.SuccessfulUpdating, null, false);
             }

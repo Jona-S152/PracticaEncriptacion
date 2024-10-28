@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PracticaEncriptacion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b99a9108c3218999be2bfcf04d106b5ac632b928")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14252c46be21bb43c71acf85d0d8a102593b7506")]
 [assembly: System.Reflection.AssemblyProductAttribute("PracticaEncriptacion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PracticaEncriptacion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

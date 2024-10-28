@@ -14,5 +14,6 @@ namespace DAL.Common
         public const string Acronimo = "@Acronimo";
         public const string CodigoPostal = "@CodigoPostal";
         public const string PaisID = "@PaisID";
+        public const string Result = "@Result";
     }
 }

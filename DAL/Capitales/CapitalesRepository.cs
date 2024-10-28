@@ -4,7 +4,9 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,18 +25,24 @@ namespace DAL.Capitales
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                string query = SqlQueries.DeleteCapitals;
+                string spName = SpNames.DeleteCapital;
 
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlCommand cmd = new SqlCommand(spName, conn))
                 {
                     conn.Open();
 
-                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue(ParametersQuery.ID, id);
+
+                    cmd.Parameters.Add(new SqlParameter() { ParameterName = ParametersQuery.Result, SqlDbType = SqlDbType.Bit, Direction = ParameterDirection.Output });
 
                     await cmd.ExecuteNonQueryAsync();
 
-                    return true;
+                    bool result = (bool)cmd.Parameters[ParametersQuery.Result].Value;
+
+                    conn.Close();
+
+                    return result;
                 }
             }
         }
@@ -151,10 +159,29 @@ namespace DAL.Capitales
             {
                 using (SqlConnection conn = new SqlConnection(_connectionString))
                 {
-                    string query = SqlQueries.InsertCapitals;
+                    conn.Open();
+                    string query = SqlQueries.GetByIdNamePostalCode;
+
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        conn.Open();
+                        cmd.CommandType = System.Data.CommandType.Text;
+
+                        cmd.Parameters.AddWithValue(ParametersQuery.ID, capital.ID);
+                        cmd.Parameters.AddWithValue(ParametersQuery.Nombre, capital.Nombre);
+                        cmd.Parameters.AddWithValue(ParametersQuery.CodigoPostal, capital.CodigoPostal);
+
+                        using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
+                        {
+                            if (reader.Read())
+                            {
+                                if (reader.GetInt32(0) > 0) return false;
+                            }
+                        }
+                    }
+
+                    query = SqlQueries.InsertCapitals;
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
                         cmd.Parameters.Add(new SqlParameter(ParametersQuery.ID, System.Data.SqlDbType.NVarChar, 100) { Value = capital.ID});
                         cmd.Parameters.Add(new SqlParameter(ParametersQuery.Nombre, System.Data.SqlDbType.NVarChar, 100) { Value = capital.Nombre});
                         cmd.Parameters.Add(new SqlParameter(ParametersQuery.Acronimo, System.Data.SqlDbType.NVarChar, 10) { Value = capital.Acronimo});
@@ -180,20 +207,28 @@ namespace DAL.Capitales
             {
                 using (SqlConnection conn = new SqlConnection(_connectionString))
                 {
-                    string query = SqlQueries.UpdateCapitals;
+                    string query = SpNames.UpdateCapital;
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         conn.Open();
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+
                         cmd.Parameters.AddWithValue(ParametersQuery.ID, id);
                         cmd.Parameters.AddWithValue(ParametersQuery.Nombre, capital.Nombre);
                         cmd.Parameters.AddWithValue(ParametersQuery.Acronimo, capital.Acronimo);
                         cmd.Parameters.AddWithValue(ParametersQuery.CodigoPostal, capital.CodigoPostal);
                         cmd.Parameters.AddWithValue(ParametersQuery.PaisID, capital.PaisID);
 
+                        cmd.Parameters.Add(new SqlParameter() { ParameterName = ParametersQuery.Result, SqlDbType = SqlDbType.Bit, Direction = ParameterDirection.Output });
+
                         await cmd.ExecuteNonQueryAsync();
+
+                        bool result = (bool)cmd.Parameters[ParametersQuery.Result].Value;
+
                         conn.Close();
 
-                        return true;
+                        return result;
                     }
                 }
             }

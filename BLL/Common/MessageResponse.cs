@@ -18,5 +18,6 @@ namespace BLL.Common
         public const string SuccessfulUpdating = "Actualización exitosa";
         public const string RegistrationFailed = "No se pudo completar el registro";
         public const string UpdatingFailed = "No se pudo completar la actualización";
+        public const string CapitalAlreadyExist = "La capital ya se encuentra registrada";
     }
 }
