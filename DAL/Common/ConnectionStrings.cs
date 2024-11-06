@@ -9,5 +9,6 @@ namespace DAL.Common
     public class ConnectionStrings
     {
         public string EncriptacionDB {  get; set; }
+        public string NorthwindDB { get; set; }
     }
 }

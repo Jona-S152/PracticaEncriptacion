@@ -1,9 +1,11 @@
 using BLL.Capitales;
 using BLL.Paises;
+using BLL.Practica;
 using DAL.Capitales;
 using DAL.Common;
 using DAL.Context;
 using DAL.Paises;
+using DAL.Practica;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,11 +15,16 @@ builder.Services.AddScoped<IPaisesRepository, PaisesRepository>();
 builder.Services.AddScoped<IPaisesService, PaisesService>();
 builder.Services.AddScoped<ICapitalesRepository, CapitalesRepository>();
 builder.Services.AddScoped<ICapitalesService, CapitalesService>();
+builder.Services.AddScoped<IPracticaRepository, PracticaRepository>();
+builder.Services.AddScoped<IPracticaService, PracticaService>();
 
 builder.Services.Configure<ConnectionStrings>(builder.Configuration.GetSection("ConnectionStrings"));
 
 builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("EncriptacionDB")));
+
+builder.Services.AddDbContext<NorthwindContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("NorthwindDB")));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

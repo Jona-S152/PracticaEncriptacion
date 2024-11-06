@@ -111,6 +111,36 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PracticaEncriptacion.Controllers.EncriptacionController",
+    "Method": "GetDataFromPurchase",
+    "RelativePath": "api/Encriptacion/GetDataFromPurchase",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.EncriptacionController",
+    "Method": "GetDiscontinuedProducts",
+    "RelativePath": "api/Encriptacion/GetDiscontinuedProducts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.EncriptacionController",
+    "Method": "GetPurchaseQuantityByCustomer",
+    "RelativePath": "api/Encriptacion/GetPurchaseQuantityByCustomer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PracticaEncriptacion.Controllers.PaisesController",
     "Method": "Add",
     "RelativePath": "api/Paises/Add",
