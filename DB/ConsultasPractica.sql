@@ -108,6 +108,8 @@ FROM EmployeeSales es
 WHERE es.TotalSales > (SELECT AVG(TotalSales) FROM EmployeeSales);
 
 
+--##################################################################################################################################################################################################
+
 
 SELECT c.CustomerID, COUNT(1) AS OrdersQuantity
 FROM Customers c
@@ -127,3 +129,14 @@ JOIN Products p ON od.ProductID = p.ProductID
 JOIN Categories c ON p.CategoryID = c.CategoryID
 GROUP BY o.OrderID
 HAVING COUNT(DISTINCT c.CategoryID) > 1)
+
+
+SELECT * FROM Customers c
+WHERE CustomerID NOT IN (SELECT CustomerID FROM Orders WHERE YEAR(OrderDate) = YEAR((SELECT TOP 1 OrderDate FROM Orders ORDER BY OrderDate DESC)) - 1)
+
+
+
+SELECT YEAR(o.OrderDate) AS Year, MONTH(o.OrderDate) AS Month, SUM(od.UnitPrice) AS Sales FROM [Order Details] od
+JOIN Orders o ON od.OrderID = o.OrderID
+GROUP BY MONTH(o.OrderDate), YEAR(o.OrderDate)
+ORDER BY Year DESC, Month DESC
