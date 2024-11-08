@@ -121,8 +121,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-06T18:40:59.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T18:40:59.438Z"
             },
             {
               "$type": "Document",
@@ -134,8 +133,7 @@
               "RelativeToolTip": "Controllers\\EncriptacionController.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAIwCYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T16:42:55.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T16:42:55.362Z"
             },
             {
               "$type": "Document",
@@ -147,8 +145,7 @@
               "RelativeToolTip": "..\\BLL\\Practica\\PracticaService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAABQwBwAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T16:41:08.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T16:41:08.403Z"
             },
             {
               "$type": "Document",
@@ -156,9 +153,9 @@
               "Title": "PracticaRepository.cs",
               "DocumentMoniker": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Practica\\PracticaRepository.cs",
               "RelativeDocumentMoniker": "..\\DAL\\Practica\\PracticaRepository.cs",
-              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Practica\\PracticaRepository.cs",
-              "RelativeToolTip": "..\\DAL\\Practica\\PracticaRepository.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAACcAAABZAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Practica\\PracticaRepository.cs*",
+              "RelativeToolTip": "..\\DAL\\Practica\\PracticaRepository.cs*",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAACcAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T15:41:57.479Z",
               "EditorCaption": ""
@@ -173,8 +170,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\Territory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:35:53.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:35:53.887Z"
             },
             {
               "$type": "Document",
@@ -186,8 +182,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\Shipper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:35:25.631Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:35:25.631Z"
             },
             {
               "$type": "Document",
@@ -199,8 +194,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\SummaryOfSalesByQuarter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:35:30.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:35:30.817Z"
             },
             {
               "$type": "Document",
@@ -212,8 +206,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\SummaryOfSalesByYear.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:35:39.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:35:39.25Z"
             },
             {
               "$type": "Document",
@@ -225,8 +218,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\Supplier.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:35:47.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:35:47.322Z"
             },
             {
               "$type": "Document",
@@ -238,8 +230,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\SalesTotalsByAmount.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:35:19.798Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:35:19.798Z"
             },
             {
               "$type": "Document",
@@ -251,8 +242,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\SalesByCategory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:35:14.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:35:14.1Z"
             },
             {
               "$type": "Document",
@@ -264,8 +254,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\Region.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:35:04.757Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:35:04.757Z"
             },
             {
               "$type": "Document",
@@ -277,8 +266,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\QuarterlyOrder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:34:55.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:34:55.315Z"
             },
             {
               "$type": "Document",
@@ -290,8 +278,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\ProductsByCategory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:34:50.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:34:50.177Z"
             },
             {
               "$type": "Document",
@@ -303,8 +290,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\ProductSalesFor1997.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:34:41.092Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:34:41.092Z"
             },
             {
               "$type": "Document",
@@ -316,8 +302,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\ProductsAboveAveragePrice.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:34:34.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:34:34.914Z"
             },
             {
               "$type": "Document",
@@ -329,8 +314,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:34:28.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:34:28.5Z"
             },
             {
               "$type": "Document",
@@ -342,8 +326,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\OrderSubtotal.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:34:13.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:34:13.179Z"
             },
             {
               "$type": "Document",
@@ -355,8 +338,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\OrdersQry.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:34:06.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:34:06.808Z"
             },
             {
               "$type": "Document",
@@ -368,8 +350,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\OrderDetailsExtended.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:34:01.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:34:01.171Z"
             },
             {
               "$type": "Document",
@@ -381,8 +362,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\OrderDetail.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:33:54.102Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:33:54.102Z"
             },
             {
               "$type": "Document",
@@ -394,8 +374,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:33:45.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:33:45.744Z"
             },
             {
               "$type": "Document",
@@ -407,8 +386,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\Invoice.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:33:40.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:33:40.083Z"
             },
             {
               "$type": "Document",
@@ -420,8 +398,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\Employee.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:33:34.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:33:34.422Z"
             },
             {
               "$type": "Document",
@@ -433,8 +410,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\CustomerDemographic.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:33:28.392Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:33:28.392Z"
             },
             {
               "$type": "Document",
@@ -446,8 +422,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\CustomerAndSuppliersByCity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:33:20.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:33:20.573Z"
             },
             {
               "$type": "Document",
@@ -459,8 +434,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\Customer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:33:12.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:33:12.482Z"
             },
             {
               "$type": "Document",
@@ -472,8 +446,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\CurrentProductList.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:33:05.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:33:05.283Z"
             },
             {
               "$type": "Document",
@@ -485,8 +458,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\CategorySalesFor1997.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:32:57.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:32:57.511Z"
             },
             {
               "$type": "Document",
@@ -498,8 +470,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:32:33.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:32:33.571Z"
             },
             {
               "$type": "Document",
@@ -511,8 +482,7 @@
               "RelativeToolTip": "..\\Entities\\Models\\Northwind\\AlphabeticalListOfProduct.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T15:31:43.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T15:31:43.545Z"
             }
           ]
         },

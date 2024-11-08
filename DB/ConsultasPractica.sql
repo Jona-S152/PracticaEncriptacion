@@ -111,6 +111,7 @@ WHERE es.TotalSales > (SELECT AVG(TotalSales) FROM EmployeeSales);
 --##################################################################################################################################################################################################
 
 
+--Mayor cantidad de pedidos en un mes especifico
 SELECT c.CustomerID, COUNT(1) AS OrdersQuantity
 FROM Customers c
 JOIN Orders o ON c.CustomerID = o.CustomerID
@@ -119,9 +120,12 @@ GROUP BY c.CustomerID
 ORDER BY OrdersQuantity DESC
 
 
+--Producto con el mayor margen de beneficio 
 SELECT ProductName, (UnitPrice * UnitsInStock) AS ProfitMargin FROM Products ORDER BY ProfitMargin ASC
 
 
+
+--Productos que contienen mas de una categoria
 SELECT * FROM Orders WHERE OrderID IN (SELECT o.OrderID
 FROM Orders o
 JOIN [Order Details] od ON o.OrderID = od.OrderID
@@ -131,12 +135,94 @@ GROUP BY o.OrderID
 HAVING COUNT(DISTINCT c.CategoryID) > 1)
 
 
+
+--Clientes que no han realizado pedidos el ultimo mes
 SELECT * FROM Customers c
 WHERE CustomerID NOT IN (SELECT CustomerID FROM Orders WHERE YEAR(OrderDate) = YEAR((SELECT TOP 1 OrderDate FROM Orders ORDER BY OrderDate DESC)) - 1)
 
 
 
+
+
+--Comparar ventas mensuales año a año
 SELECT YEAR(o.OrderDate) AS Year, MONTH(o.OrderDate) AS Month, SUM(od.UnitPrice) AS Sales FROM [Order Details] od
 JOIN Orders o ON od.OrderID = o.OrderID
 GROUP BY MONTH(o.OrderDate), YEAR(o.OrderDate)
 ORDER BY Year DESC, Month DESC
+
+
+
+
+
+--Empleados que han gestionado pedidos de clientes de más de 5 países diferentes:
+--Lista los empleados que han gestionado pedidos de clientes provenientes de más de cinco países diferentes.
+WITH OrdersCountryCounts AS (
+	SELECT c.Country AS CustomerCountry, e.FirstName AS EmployeeName, c.ContactName AS CustomerName
+	FROM Orders o
+	JOIN Customers c ON o.CustomerID = c.CustomerID
+	JOIN Employees e ON e.EmployeeID = o.EmployeeID
+),
+OrderCountryEmployee AS (
+	SELECT CustomerCountry, EmployeeName
+	FROM OrdersCountryCounts 
+	GROUP BY EmployeeName, CustomerCountry
+)
+SELECT EmployeeName, COUNT(EmployeeName)
+FROM OrderCountryEmployee
+GROUP BY EmployeeName
+HAVING COUNT(EmployeeName) > 5
+
+
+--Productos con ventas decrecientes:
+--Identifica los productos cuyas ventas han disminuido en cada trimestre del último año.
+DECLARE @AñoPasado INT = YEAR((SELECT TOP 1 OrderDate FROM Orders ORDER BY OrderDate DESC)) - 1;
+DECLARE @AñoActual INT = YEAR((SELECT TOP 1 OrderDate FROM Orders ORDER BY OrderDate DESC));
+WITH OrdersLastYear AS (
+	SELECT 
+	o.OrderID,
+	DATEPART(YEAR, o.OrderDate) AS OrderYear,
+	DATEPART(QUARTER, o.OrderDate) AS OrderQuarter
+	FROM Orders o
+	JOIN [Order Details] od ON o.OrderID = od.OrderID
+	WHERE YEAR(o.OrderDate) = @AñoPasado
+	GROUP BY DATEPART(YEAR, o.OrderDate), DATEPART(QUARTER, o.OrderDate), o.OrderID
+),
+OrdersActualYear AS (
+	SELECT 
+	o.OrderID,
+	DATEPART(YEAR, o.OrderDate) AS OrderYear,
+	DATEPART(QUARTER, o.OrderDate) AS OrderQuarter
+	FROM Orders o
+	JOIN [Order Details] od ON o.OrderID = od.OrderID
+	WHERE YEAR(o.OrderDate) = @AñoActual
+	GROUP BY DATEPART(YEAR, o.OrderDate), DATEPART(QUARTER, o.OrderDate), o.OrderID
+),
+SalesLastYear AS (
+	SELECT oly.OrderQuarter, SUM(od.Quantity * od.UnitPrice) AS VentasPorTrimestre
+	FROM OrdersLastYear oly
+	JOIN [Order Details] od ON od.OrderID = oly.OrderID
+	GROUP BY oly.OrderQuarter
+),
+SalesActualYear AS(
+	SELECT ocy.OrderQuarter, SUM(od.Quantity * od.UnitPrice) AS VentasPorTrimestre
+	FROM OrdersActualYear ocy
+	JOIN [Order Details] od ON od.OrderID = ocy.OrderID
+	GROUP BY ocy.OrderQuarter
+)
+SELECT * 
+FROM SalesLastYear sly
+JOIN SalesActualYear say ON sly.OrderQuarter = say.OrderQuarter
+WHERE say.VentasPorTrimestre < sly.VentasPorTrimestre
+
+
+
+
+--Clientes con pedidos de alto valor:
+--Encuentra los clientes que han realizado pedidos cuyo valor total supera un umbral específico (por ejemplo, $10,000).
+SELECT c.ContactName, SUM(od.Quantity * od.UnitPrice) AS TotalValue
+FROM Customers c
+JOIN Orders o ON c.CustomerID = o.CustomerID
+JOIN [Order Details] od ON o.OrderID = od.OrderID
+GROUP BY od.OrderID, c.ContactName
+HAVING SUM(od.Quantity * od.UnitPrice) > 10000
+ORDER BY TotalValue DESC
