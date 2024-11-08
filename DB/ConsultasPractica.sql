@@ -148,7 +148,7 @@ WHERE CustomerID NOT IN (SELECT CustomerID FROM Orders WHERE YEAR(OrderDate) = Y
 SELECT YEAR(o.OrderDate) AS Year, MONTH(o.OrderDate) AS Month, SUM(od.UnitPrice) AS Sales FROM [Order Details] od
 JOIN Orders o ON od.OrderID = o.OrderID
 GROUP BY MONTH(o.OrderDate), YEAR(o.OrderDate)
-ORDER BY Year DESC, Month DESC
+ORDER BY Year DESC, Month ASC
 
 
 
