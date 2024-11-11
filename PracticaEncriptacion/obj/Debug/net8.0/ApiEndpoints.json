@@ -112,6 +112,46 @@
   },
   {
     "ContainingType": "PracticaEncriptacion.Controllers.EncriptacionController",
+    "Method": "CompareSalesPerYear",
+    "RelativePath": "api/Encriptacion/CompareSalesPerYear",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.EncriptacionController",
+    "Method": "EmployeesOrdersCustomersFrom5Countries",
+    "RelativePath": "api/Encriptacion/EmployeesOrdersCustomersFrom5Countries",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.EncriptacionController",
+    "Method": "CustomersWithHighValueOrders",
+    "RelativePath": "api/Encriptacion/GetCustomersWithHighValueOrders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.EncriptacionController",
+    "Method": "CustomersWithoutOrdersInLastMonth",
+    "RelativePath": "api/Encriptacion/GetCustomersWithoutOrdersInLastMonth",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.EncriptacionController",
     "Method": "GetDataFromPurchase",
     "RelativePath": "api/Encriptacion/GetDataFromPurchase",
     "HttpMethod": "GET",
@@ -132,12 +172,48 @@
   },
   {
     "ContainingType": "PracticaEncriptacion.Controllers.EncriptacionController",
+    "Method": "ProductsMoreThanOneCategory",
+    "RelativePath": "api/Encriptacion/GetProductsMoreThanOneCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.EncriptacionController",
+    "Method": "ProfitMarginByCategory",
+    "RelativePath": "api/Encriptacion/GetProfitMarginByCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.EncriptacionController",
     "Method": "GetPurchaseQuantityByCustomer",
     "RelativePath": "api/Encriptacion/GetPurchaseQuantityByCustomer",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PracticaEncriptacion.Controllers.EncriptacionController",
+    "Method": "QuantityOrdersByMonth",
+    "RelativePath": "api/Encriptacion/QuantityOrdersByMonth",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

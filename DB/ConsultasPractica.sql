@@ -120,6 +120,7 @@ GROUP BY c.CustomerID
 ORDER BY OrdersQuantity DESC
 
 
+
 --Producto con el mayor margen de beneficio 
 SELECT ProductName, (UnitPrice * UnitsInStock) AS ProfitMargin FROM Products ORDER BY ProfitMargin ASC
 
@@ -145,7 +146,8 @@ WHERE CustomerID NOT IN (SELECT CustomerID FROM Orders WHERE YEAR(OrderDate) = Y
 
 
 --Comparar ventas mensuales año a año
-SELECT YEAR(o.OrderDate) AS Year, MONTH(o.OrderDate) AS Month, SUM(od.UnitPrice) AS Sales FROM [Order Details] od
+SELECT YEAR(o.OrderDate) AS Year, MONTH(o.OrderDate) AS Month, SUM(od.UnitPrice) AS Sales 
+FROM [Order Details] od
 JOIN Orders o ON od.OrderID = o.OrderID
 GROUP BY MONTH(o.OrderDate), YEAR(o.OrderDate)
 ORDER BY Year DESC, Month ASC
@@ -157,18 +159,14 @@ ORDER BY Year DESC, Month ASC
 --Empleados que han gestionado pedidos de clientes de más de 5 países diferentes:
 --Lista los empleados que han gestionado pedidos de clientes provenientes de más de cinco países diferentes.
 WITH OrdersCountryCounts AS (
-	SELECT c.Country AS CustomerCountry, e.FirstName AS EmployeeName, c.ContactName AS CustomerName
+	SELECT c.Country AS CustomerCountry, e.FirstName AS EmployeeName
 	FROM Orders o
 	JOIN Customers c ON o.CustomerID = c.CustomerID
 	JOIN Employees e ON e.EmployeeID = o.EmployeeID
-),
-OrderCountryEmployee AS (
-	SELECT CustomerCountry, EmployeeName
-	FROM OrdersCountryCounts 
-	GROUP BY EmployeeName, CustomerCountry
+	GROUP BY e.FirstName, c.Country
 )
-SELECT EmployeeName, COUNT(EmployeeName)
-FROM OrderCountryEmployee
+SELECT EmployeeName, COUNT(EmployeeName) AS CountCountries
+FROM OrdersCountryCounts
 GROUP BY EmployeeName
 HAVING COUNT(EmployeeName) > 5
 
@@ -223,6 +221,6 @@ SELECT c.ContactName, SUM(od.Quantity * od.UnitPrice) AS TotalValue
 FROM Customers c
 JOIN Orders o ON c.CustomerID = o.CustomerID
 JOIN [Order Details] od ON o.OrderID = od.OrderID
-GROUP BY od.OrderID, c.ContactName
+GROUP BY c.ContactName
 HAVING SUM(od.Quantity * od.UnitPrice) > 10000
 ORDER BY TotalValue DESC

@@ -16,6 +16,26 @@ namespace BLL.Practica
             _repository = repo;
         }
 
+        public async Task<object> CompareSalesPerYear()
+        {
+            return await _repository.CompareSalesPerYear();
+        }
+
+        public async Task<object> CustomersWithHighValueOrders()
+        {
+            return await _repository.CustomersWithHighValueOrders();
+        }
+
+        public async Task<object> CustomersWithoutOrdersInLastMonth()
+        {
+            return await _repository.CustomersWithoutOrdersInLastMonth();
+        }
+
+        public async Task<object> EmployeesOrdersCustomersFrom5Countries()
+        {
+            return await _repository.EmployeesOrdersCustomersFrom5Countries();
+        }
+
         public async Task<object> GetDataFromPurchase()
         {
             return await _repository.GetDataFromPurchase();
@@ -29,6 +49,26 @@ namespace BLL.Practica
         public async Task<object> GetPurchaseQuantityByCustomer()
         {
             return await _repository.GetPurchaseQuantityByCustomer();
+        }
+
+        public async Task<object> ProductsDecliningSales()
+        {
+            return await _repository.ProductsDecliningSales();
+        }
+
+        public async Task<object> ProductsMoreThanOneCategory()
+        {
+            return await _repository.ProductsMoreThanOneCategory();
+        }
+
+        public async Task<object> ProfitMarginByCategory()
+        {
+            return await _repository.ProfitMarginByCategory();
+        }
+
+        public async Task<object> QuantityOrdersByMonth(DateTime month)
+        {
+            return await _repository.QuantityOrdersByMonth(month);
         }
     }
 }
