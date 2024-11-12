@@ -193,8 +193,10 @@ SalesLastYear AS (
 )
 SELECT sly.*
 FROM SalesLastYear sly
-JOIN (SELECT OrderQuarter, LAG(VentasPorTrimestre) OVER (ORDER BY VentasPorTrimestre) AS LastSalePerQuarter FROM SalesLastYear) AS Vpt ON Vpt.OrderQuarter = sly.OrderQuarter
-WHERE Vpt.LastSalePerQuarter < sly.VentasPorTrimestre OR Vpt.LastSalePerQuarter IS NULL
+JOIN (
+	SELECT OrderQuarter, LAG(VentasPorTrimestre, 1, VentasPorTrimestre) OVER (ORDER BY VentasPorTrimestre) AS LastSalePerQuarter FROM SalesLastYear
+) AS Vpt ON Vpt.OrderQuarter = sly.OrderQuarter
+WHERE Vpt.LastSalePerQuarter <= sly.VentasPorTrimestre 
 
 
 
