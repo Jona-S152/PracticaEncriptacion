@@ -78,6 +78,8 @@ WHERE PreviousOrderDate IS NOT NULL
 GROUP BY CustomerID;
 
 
+SELECT * FROM Orders WHERE OrderDate = '1997-10-03 00:00:00.000'
+SELECT * FROM Orders WHERE OrderDate = '1997-08-25 00:00:00.000'
 
 
 WITH CategoryAverages AS (
@@ -173,8 +175,6 @@ HAVING COUNT(EmployeeName) > 5
 
 --Productos con ventas decrecientes:
 --Identifica los productos cuyas ventas han disminuido en cada trimestre del último año.
-DECLARE @AñoPasado INT = YEAR((SELECT TOP 1 OrderDate FROM Orders ORDER BY OrderDate DESC)) - 1;
-DECLARE @AñoActual INT = YEAR((SELECT TOP 1 OrderDate FROM Orders ORDER BY OrderDate DESC));
 WITH OrdersLastYear AS (
 	SELECT 
 	o.OrderID,
@@ -182,17 +182,7 @@ WITH OrdersLastYear AS (
 	DATEPART(QUARTER, o.OrderDate) AS OrderQuarter
 	FROM Orders o
 	JOIN [Order Details] od ON o.OrderID = od.OrderID
-	WHERE YEAR(o.OrderDate) = @AñoPasado
-	GROUP BY DATEPART(YEAR, o.OrderDate), DATEPART(QUARTER, o.OrderDate), o.OrderID
-),
-OrdersActualYear AS (
-	SELECT 
-	o.OrderID,
-	DATEPART(YEAR, o.OrderDate) AS OrderYear,
-	DATEPART(QUARTER, o.OrderDate) AS OrderQuarter
-	FROM Orders o
-	JOIN [Order Details] od ON o.OrderID = od.OrderID
-	WHERE YEAR(o.OrderDate) = @AñoActual
+	WHERE YEAR(o.OrderDate) = YEAR((SELECT TOP 1 OrderDate FROM Orders ORDER BY OrderDate DESC)) - 1
 	GROUP BY DATEPART(YEAR, o.OrderDate), DATEPART(QUARTER, o.OrderDate), o.OrderID
 ),
 SalesLastYear AS (
@@ -200,17 +190,12 @@ SalesLastYear AS (
 	FROM OrdersLastYear oly
 	JOIN [Order Details] od ON od.OrderID = oly.OrderID
 	GROUP BY oly.OrderQuarter
-),
-SalesActualYear AS(
-	SELECT ocy.OrderQuarter, SUM(od.Quantity * od.UnitPrice) AS VentasPorTrimestre
-	FROM OrdersActualYear ocy
-	JOIN [Order Details] od ON od.OrderID = ocy.OrderID
-	GROUP BY ocy.OrderQuarter
 )
-SELECT * 
+SELECT sly.*
 FROM SalesLastYear sly
-JOIN SalesActualYear say ON sly.OrderQuarter = say.OrderQuarter
-WHERE say.VentasPorTrimestre < sly.VentasPorTrimestre
+JOIN (SELECT OrderQuarter, LAG(VentasPorTrimestre) OVER (ORDER BY VentasPorTrimestre) AS LastSalePerQuarter FROM SalesLastYear) AS Vpt ON Vpt.OrderQuarter = sly.OrderQuarter
+WHERE Vpt.LastSalePerQuarter < sly.VentasPorTrimestre OR Vpt.LastSalePerQuarter IS NULL
+
 
 
 
