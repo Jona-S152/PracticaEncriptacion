@@ -78,8 +78,6 @@ WHERE PreviousOrderDate IS NOT NULL
 GROUP BY CustomerID;
 
 
-SELECT * FROM Orders WHERE OrderDate = '1997-10-03 00:00:00.000'
-SELECT * FROM Orders WHERE OrderDate = '1997-08-25 00:00:00.000'
 
 
 WITH CategoryAverages AS (
@@ -211,3 +209,18 @@ JOIN [Order Details] od ON o.OrderID = od.OrderID
 GROUP BY c.ContactName
 HAVING SUM(od.Quantity * od.UnitPrice) > 10000
 ORDER BY TotalValue DESC
+
+
+
+
+--Consultas dinamicas
+DECLARE @CategoryName NVARCHAR(15) = 'Grains/Cereals'
+DECLARE @query NVARCHAR(MAX) =   N'SELECT c.CategoryName, p.ProductName FROM Products p ' + 
+								'JOIN Categories c ON p.CategoryID = c.CategoryId ' +
+								'GROUP BY c.CategoryName, p.ProductName ' +
+								'HAVING c.CategoryName = @CName; '
+
+PRINT(@query)
+EXEC sp_executesql @query, N'@CName nvarchar(15)', @CName = @CategoryName
+
+DECLARE @CName nvarchar(15) = 'Grains/Cereals'; SELECT c.CategoryName, p.ProductName FROM Products p JOIN Categories c ON p.CategoryID = c.CategoryId GROUP BY c.CategoryName, p.ProductName HAVING c.CategoryName = @CName; 
