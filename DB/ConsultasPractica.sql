@@ -175,26 +175,19 @@ HAVING COUNT(EmployeeName) > 5
 --Identifica los productos cuyas ventas han disminuido en cada trimestre del último año.
 WITH OrdersLastYear AS (
 	SELECT 
-	o.OrderID,
-	DATEPART(YEAR, o.OrderDate) AS OrderYear,
-	DATEPART(QUARTER, o.OrderDate) AS OrderQuarter
+	DATEPART(QUARTER, o.OrderDate) AS OrderQuarter,
+	SUM(od.Quantity * od.UnitPrice) AS SalesPerQuarter
 	FROM Orders o
 	JOIN [Order Details] od ON o.OrderID = od.OrderID
 	WHERE YEAR(o.OrderDate) = YEAR((SELECT TOP 1 OrderDate FROM Orders ORDER BY OrderDate DESC)) - 1
-	GROUP BY DATEPART(YEAR, o.OrderDate), DATEPART(QUARTER, o.OrderDate), o.OrderID
-),
-SalesLastYear AS (
-	SELECT oly.OrderQuarter, SUM(od.Quantity * od.UnitPrice) AS VentasPorTrimestre
-	FROM OrdersLastYear oly
-	JOIN [Order Details] od ON od.OrderID = oly.OrderID
-	GROUP BY oly.OrderQuarter
+	GROUP BY DATEPART(QUARTER, o.OrderDate)
 )
-SELECT sly.*
-FROM SalesLastYear sly
+SELECT oly.*
+FROM OrdersLastYear oly
 JOIN (
-	SELECT OrderQuarter, LAG(VentasPorTrimestre, 1, VentasPorTrimestre) OVER (ORDER BY VentasPorTrimestre) AS LastSalePerQuarter FROM SalesLastYear
-) AS Vpt ON Vpt.OrderQuarter = sly.OrderQuarter
-WHERE Vpt.LastSalePerQuarter <= sly.VentasPorTrimestre 
+	SELECT OrderQuarter, LAG(SalesPerQuarter) OVER (ORDER BY SalesPerQuarter) AS LastSalePerQuarter FROM OrdersLastYear
+) AS Vpt ON Vpt.OrderQuarter = oly.OrderQuarter
+WHERE Vpt.LastSalePerQuarter < oly.SalesPerQuarter 
 
 
 
