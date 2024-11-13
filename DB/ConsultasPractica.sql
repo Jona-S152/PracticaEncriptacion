@@ -214,6 +214,6 @@ DECLARE @query NVARCHAR(MAX) =   N'SELECT c.CategoryName, p.ProductName FROM Pro
 								'HAVING c.CategoryName = @CName; '
 
 PRINT(@query)
-EXEC sp_executesql @query, N'@CName nvarchar(15)', @CName = @CategoryName
+EXEC sp_executesql @query, N'@CName NVARCHAR(15)', @CName = @CategoryName
 
-DECLARE @CName nvarchar(15) = 'Grains/Cereals'; SELECT c.CategoryName, p.ProductName FROM Products p JOIN Categories c ON p.CategoryID = c.CategoryId GROUP BY c.CategoryName, p.ProductName HAVING c.CategoryName = @CName; 
+DECLARE @CName NVARCHAR(15) = 'Grains/Cereals'; SELECT c.CategoryName, p.ProductName FROM Products p JOIN Categories c ON p.CategoryID = c.CategoryId GROUP BY c.CategoryName, p.ProductName HAVING c.CategoryName = @CName; 

@@ -202,11 +202,47 @@ namespace DAL.Practica
             }
         }
 
-        public Task<object> ProductsDecliningSales()
+        public async Task<object> ProductsDecliningSales()
         {
             try
             {
-                return null;
+                List<DecliningSales> listResult = new List<DecliningSales>();
+
+                var lastYear = await _northwindContext.Orders.OrderByDescending(o => o.OrderDate).Select(o => o.OrderDate).FirstOrDefaultAsync();
+                var result = await (from o in _northwindContext.Orders
+                                    join od in _northwindContext.OrderDetails on o.OrderId equals od.OrderId
+                                    where o.OrderDate.Value.Year == lastYear.Value.Year - 1
+                                    group new { o, od } by ((o.OrderDate.Value.Month - 1) / 3 + 1) into g
+                                    select new DecliningSales()
+                                    {
+                                        OrderQuarter = g.Key,
+                                        SalesPerQuarter = g.Sum(o => o.od.Quantity * o.od.UnitPrice)
+                                    }).ToListAsync();
+
+                int counter = 0;
+
+                while (counter < result.Count)
+                {
+                    if (counter == 0)
+                    {
+                        counter++;
+                        continue;
+                    }
+
+                    if (result[counter - 1].SalesPerQuarter < result[counter].SalesPerQuarter)
+                    {
+                        DecliningSales newLastResult = new DecliningSales()
+                        {
+                            OrderQuarter = result[counter].OrderQuarter,
+                            SalesPerQuarter = result[counter].SalesPerQuarter
+                        };
+
+                        listResult.Add(newLastResult);
+                        counter++;
+                    }
+                }
+
+                return listResult;
             }
             catch (Exception ex)
             {

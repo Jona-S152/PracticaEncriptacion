@@ -94,5 +94,13 @@ namespace PracticaEncriptacion.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet("ProductsDecliningSales")]
+        public async Task<IActionResult> ProductsDecliningSales()
+        {
+            var result = await _service.ProductsDecliningSales();
+
+            return Ok(result);
+        }
     }
 }
