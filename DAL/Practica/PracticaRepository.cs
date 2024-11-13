@@ -208,6 +208,8 @@ namespace DAL.Practica
             {
                 List<DecliningSales> listResult = new List<DecliningSales>();
 
+                int counter = 0;
+
                 var lastYear = await _northwindContext.Orders.OrderByDescending(o => o.OrderDate).Select(o => o.OrderDate).FirstOrDefaultAsync();
                 var result = await (from o in _northwindContext.Orders
                                     join od in _northwindContext.OrderDetails on o.OrderId equals od.OrderId
@@ -218,8 +220,6 @@ namespace DAL.Practica
                                         OrderQuarter = g.Key,
                                         SalesPerQuarter = g.Sum(o => o.od.Quantity * o.od.UnitPrice)
                                     }).ToListAsync();
-
-                int counter = 0;
 
                 while (counter < result.Count)
                 {

@@ -57,8 +57,7 @@
               "RelativeToolTip": "..\\BLL\\Practica\\PracticaService.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAAADUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T16:33:31.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T16:33:31.521Z"
             },
             {
               "$type": "Document",
@@ -92,7 +91,7 @@
               "RelativeDocumentMoniker": "..\\DAL\\Practica\\PracticaRepository.cs",
               "ToolTip": "C:\\Users\\viamatica\\Desktop\\PracticaEncriptacion\\DAL\\Practica\\PracticaRepository.cs",
               "RelativeToolTip": "..\\DAL\\Practica\\PracticaRepository.cs",
-              "ViewState": "AgIAAM0AAAAAAAAAAAAAANIAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAM0AAAAAAAAAAAAAANEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T15:41:57.479Z",
               "EditorCaption": ""
@@ -107,8 +106,7 @@
               "RelativeToolTip": "Controllers\\EncriptacionController.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAIwGYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T16:42:55.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T16:42:55.362Z"
             }
           ]
         },
